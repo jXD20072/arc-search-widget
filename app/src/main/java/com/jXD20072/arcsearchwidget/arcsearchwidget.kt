@@ -72,7 +72,7 @@ class arcsearchwidget : GlanceAppWidget() {
                         provider = ImageProvider(R.drawable.arc_logo),
                         contentDescription = "arc-logo",
                         modifier = GlanceModifier
-                            .size(38.dp)
+                            .size(34.dp)
                     )
                 }
 
