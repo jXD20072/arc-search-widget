@@ -2,16 +2,18 @@ package com.jXD20072.arcsearchwidget
 
 import android.content.Context
 import android.content.Intent
+import android.widget.RemoteViews
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.glance.Button
 import androidx.glance.ButtonDefaults
 import androidx.glance.GlanceId
 import androidx.glance.GlanceModifier
 import androidx.glance.Image
 import androidx.glance.ImageProvider
+import androidx.glance.LocalContext
+import androidx.glance.appwidget.AndroidRemoteViews
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.cornerRadius
 import androidx.glance.appwidget.provideContent
@@ -25,11 +27,6 @@ import androidx.glance.layout.fillMaxWidth
 import androidx.glance.layout.height
 import androidx.glance.layout.padding
 import androidx.glance.layout.size
-import androidx.glance.text.FontFamily
-import androidx.glance.text.FontWeight
-import androidx.glance.text.Text
-import androidx.glance.text.TextAlign
-import androidx.glance.text.TextStyle
 import androidx.glance.unit.ColorProvider
 
 
@@ -50,6 +47,7 @@ class arcsearchwidget : GlanceAppWidget() {
             modifier = GlanceModifier
                 .fillMaxWidth()
                 .height(52.dp)
+                .background(Color.White)
                 .cornerRadius(40.dp),
         ) {
 
@@ -81,33 +79,15 @@ class arcsearchwidget : GlanceAppWidget() {
                 Box(
                     modifier = GlanceModifier
                         .fillMaxSize()
-                        .padding(8.dp),
+                    ,
                     contentAlignment = Alignment(
                         horizontal = Alignment.Start,
                         vertical = Alignment.CenterVertically)
                 ) {
-                    Box(
-                        contentAlignment = Alignment(
-                            horizontal = Alignment.Start,
-                            vertical = Alignment.CenterVertically
-                        ),
+                    // Glance doesn't support shadows natively so we have to add it with xml
+                    AndroidRemoteViews(RemoteViews(LocalContext.current.packageName, R.layout.search_box),
                         modifier = GlanceModifier
                             .fillMaxSize()
-                            .background(Color(236, 236, 236))
-                            .cornerRadius(30.dp)
-                    ) {}
-
-                    Text(
-                        text = "Search",
-                        style = TextStyle(
-                            color = ColorProvider(Color(164, 164, 164, 255)),
-                            fontFamily = FontFamily("Inter"),
-                            fontSize = 16.sp,
-                            fontWeight = FontWeight.Medium,
-                            textAlign = TextAlign.Center
-                        ),
-                        modifier = GlanceModifier
-                            .padding(start = 15.dp)
                     )
                 }
             }
