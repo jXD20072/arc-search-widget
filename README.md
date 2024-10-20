@@ -1,7 +1,8 @@
 
 # arc-search-widget
 **arc-search-widget** is a community-made android search widget for [Arc Search](https://play.google.com/store/apps/details?id=company.thebrowser.arc&hl=es_419).
-![arc-search-widget-1](https://github.com/user-attachments/assets/09c671bb-61d9-4003-835f-3b0140cd7181)
+
+![arc-search-widget](https://github.com/user-attachments/assets/76a5e31f-c178-4054-b51c-ba3c339ae54b)
 
 ## Installation
 Simply download and install the .apk file from the latest release!
