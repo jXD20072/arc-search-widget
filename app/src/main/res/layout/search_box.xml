@@ -13,6 +13,6 @@
     android:background="@drawable/rounded_corner"
     android:elevation="6dp"
     android:layout_marginHorizontal="8dp"
-    android:paddingLeft="12dp"
+    android:paddingLeft="15dp"
     >
 </TextView>
