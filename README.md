@@ -8,6 +8,3 @@
 Simply download and install the .apk file from the latest release!
 
 Once installed, you can add it to your home screen by selecting it in the widget drawer.
-
-## Notes
-* Currently, it just opens Arc Search (it doesn't automatically open the search window). This is a planned feature and I'm actively searching for ways to do it. That being said, PRs are welcome!
